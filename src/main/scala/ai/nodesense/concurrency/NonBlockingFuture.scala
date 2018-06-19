@@ -11,6 +11,7 @@ object NonBlockingFuture extends App {
   val f = Future {
     Thread.sleep(Random.nextInt(500))
     42
+    //throw new Exception("Unknwon Error ")
   }
   println("before onComplete")
 
@@ -18,7 +19,7 @@ object NonBlockingFuture extends App {
 
   f.onComplete {
     case Success(value) => println(s"Got the callback, meaning = $value")
-    case Failure(e) => e.printStackTrace
+    case Failure(e) => println("Error "); e.printStackTrace
   }
   // do the rest of your work
   println("A ..."); Thread.sleep(100)

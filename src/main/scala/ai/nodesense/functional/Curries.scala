@@ -14,11 +14,13 @@ object Curries extends App {
       sumF;
     }
 
+
+
     val sumId =  sum(x => x)
     val sumSq =   sum(x => x * x)
     val sumCube =  sum(x => x * x * x)
 
-    println(sumId(0, 2))
+    println(sumId(0, 3))
     println(sumSq(0, 2))
     println(sumCube(0, 2))
 
