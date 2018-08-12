@@ -47,7 +47,6 @@ object VarianceApp{
   }
 }
 
-
 class Invariant[B]
 class Covariant[+B]
 class Sub[+A] extends Covariant[A]
