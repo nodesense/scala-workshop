@@ -24,6 +24,29 @@ object Fan {
   }
 }
 
+
+class Light(val id: String, val watt: Int) {
+  override def toString: String = s"ID : $id; Watt: $watt"
+}
+
+
+object Light {
+
+  def apply(id: String, watt: Int = 0) : Light = {
+    println(s"Light Apply $id")
+    new Light(id, watt)
+  }
+
+  // unapply :Extractor, returns Option
+  def unapply(light: Light) : Option[(String, Int)] = {
+    println("unapply called");
+    Some((light.id, light.watt))
+
+    // returns None
+    // when id not present None
+  }
+}
+
 object FanTest extends App {
 
   // calls apply method
@@ -32,9 +55,30 @@ object FanTest extends App {
   val fan1 = Fan("fan1")
   // fan1.toString called automatically
   println(fan1);
-  // Extractor for id, needs unapply method
-  val Fan(id) = fan1;
 
-  println("ID is ", id);
+  {
+    // Extractor for id, needs unapply method
+    val Fan(id) = fan1;
+
+    println("ID is ", id);
+  }
+
+  {
+    val light1 = Light("light1", 10)
+    val Light(id, watt) = light1;
+
+    println("ID is ", id, watt);
+  }
+
+
+  {
+    val light2 = Light("light2", 24)
+    val Light(watt) = light2;
+
+    println("light 2 watt is ", watt);
+  }
+
+
+
 
 }
