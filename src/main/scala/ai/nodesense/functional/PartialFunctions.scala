@@ -50,6 +50,7 @@ object PartialFunctions extends  App {
 
   // collect takes partial function
   val result2 = list.collect(squareRoot)
+  
   println(result2)
 
 }
