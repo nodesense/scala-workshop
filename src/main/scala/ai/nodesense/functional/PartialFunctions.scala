@@ -19,6 +19,11 @@ object PartialFunctions extends  App {
   println(divide.isDefinedAt(1))
   println(divide.isDefinedAt(0))
 
+  if (divide.isDefinedAt(1)) println(divide(1))
+
+  if (divide.isDefinedAt(0)) // returns false
+      println(divide(0)) // wont' execute
+
   // implicit divide, where case works as isDefined
   val divide2: PartialFunction[Int, Int] = {
     case d: Int if d != 0 => 42 / d
@@ -29,9 +34,6 @@ object PartialFunctions extends  App {
   println(divide2.isDefinedAt(0))
 
 
-  if (divide.isDefinedAt(1)) println(divide(1))
-
-  if (divide.isDefinedAt(0)) println(divide(1))
 
   if (divide2.isDefinedAt(1)) println(divide(1))
 
@@ -50,7 +52,7 @@ object PartialFunctions extends  App {
 
   // collect takes partial function
   val result2 = list.collect(squareRoot)
-  
+
   println(result2)
 
 }

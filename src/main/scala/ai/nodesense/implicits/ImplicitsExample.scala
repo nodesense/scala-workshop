@@ -27,6 +27,8 @@ object ImplicitsExample2 extends  App {
 
     implicit val i : Int = 1                        //> i  : Int = 1
 
+    val ii : Int = 2
+
     def add(a:Int)(implicit b:Int) = a + b          //> add: (a: Int)(implicit b: Int)Int
 
     println(add(10)(15)  )                                   //> res0: Int = 25

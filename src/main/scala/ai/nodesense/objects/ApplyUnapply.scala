@@ -65,6 +65,7 @@ object FanTest extends App {
 
   {
     val light1 = Light("light1", 10)
+    // extracting id and watt from object
     val Light(id, watt) = light1;
 
     println("ID is ", id, watt);
