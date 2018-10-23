@@ -14,6 +14,12 @@ object Options extends App {
     }
   }
 
+
+  toInt("100") match {
+    case Some(i) => println(i)
+    case None => println("Error!!")
+  }
+
   println("parse 100", toInt("100"));
   println("parse empty ", toInt(""));
 
