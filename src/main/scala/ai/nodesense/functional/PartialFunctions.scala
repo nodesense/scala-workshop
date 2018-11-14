@@ -55,4 +55,13 @@ object PartialFunctions extends  App {
 
   println(result2)
 
+
+  // Partial function with orElse
+  val t1: PartialFunction[Int, String] = {case 1 => "I am 1"}
+  val t2: PartialFunction[Int, String] = {case 2 => "I am 2"}
+  val t = t1 orElse t2
+  println("T is ", t)
+  println("t of 1 is ", t(1)) // I am 1
+  println("t of 2 is ", t(2)) // I am 2
+
 }
