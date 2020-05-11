@@ -1,4 +1,4 @@
-package workshop.section04_objects.lesson01
+package workshop.section04_objects.lesson0110
 
 trait Control {
    def on()

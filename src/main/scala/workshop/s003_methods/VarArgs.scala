@@ -14,10 +14,19 @@ object VarArgs extends App {
     numbers.foreach(println)
   }
 
+  def sum(numbers:Int*):Int={
+    var s=0
+    for(n <- numbers){
+       s+=n
+    }
+    s // return the total
+  }
+
   printAll(); // error due to multiple default
   printAll("Hello");
   printAll("Welcome", "to", "Scala")
   printNumbers(1, 2, 3)
+  println(sum(1, 2,3));
 
   // List to splat/spread, making an List to spread
 

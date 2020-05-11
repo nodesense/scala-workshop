@@ -1,6 +1,6 @@
 package workshop.s007_loops
 
-object Loops {
+object ForLoops {
   /*
     For Loops
 
@@ -42,33 +42,12 @@ object Loops {
       println(i)
   }
 
-  def whileLoop() : Unit = {
-    println("While loop")
-    var i = 0
-    while ( i < 5) {
-      println(i)
-      i += 1
-    }
-  }
-
-  def doWhile() : Unit = {
-    println("Do while ")
-    var i = 0;
-
-    do {
-      println (i)
-      i += 1
-    } while ( i < 5)
-  }
-
   def main(args: Array[String]) = {
      forIterator()
     forWithTo()
     forWithUntil()
     forWithRange()
     forWithIfGuard();
-    whileLoop()
-    doWhile()
   }
 
 

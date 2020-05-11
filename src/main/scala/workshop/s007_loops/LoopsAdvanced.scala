@@ -12,6 +12,7 @@ object LoopsAdvanced {
 
   def forYieldLazyExec() : Unit = {
     println("For forYieldLazyExec")
+
     def multi(n : Int) : Int = {
       println ("multi called ", n)
       n * n
