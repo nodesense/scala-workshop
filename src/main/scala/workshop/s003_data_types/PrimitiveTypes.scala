@@ -45,4 +45,5 @@ object PrimitiveTypes extends  App {
 
   val str: String = "Hello";
 
+
 }
