@@ -43,6 +43,7 @@ object ImmutableList extends  App {
   println("MaxBy ", phones.maxBy(phone => phone.price))
   println("MinBy ", phones.minBy(phone => phone.price))
 
+
   // filters
   val filteedList = phones.filter(phone => phone.price >= 25000);
   println("Filtered list >= 25000 ", filteedList)
